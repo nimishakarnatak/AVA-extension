@@ -1,0 +1,70 @@
+body {
+    width: 300px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.start { 
+    background: #4CAF50; 
+    color: white; 
+}
+
+.stop { 
+    background: #f44336; 
+    color: white; 
+}
+
+.download { 
+    background: #2196F3; 
+    color: white; 
+}
+
+.status {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.recording { 
+    background: #ffebee; 
+    color: #c62828; 
+}
+
+.ready { 
+    background: #e8f5e8; 
+    color: #2e7d32; 
+}
+
+.checkbox-container {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input {
+    margin-right: 8px;
+}
+
+.info {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+}
+
+h3 {
+    margin-top: 0;
+    color: #333;
+}

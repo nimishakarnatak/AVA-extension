@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        
+        .panel {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .survey-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #9C27B0;
+            padding-bottom: 10px;
+        }
+        
+        .survey-header h3 {
+            margin: 0;
+            color: #9C27B0;
+            font-size: 18px;
+        }
+        
+        .question-group {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 6px;
+            border-left: 3px solid #9C27B0;
+        }
+        
+        .question-label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            color: #555;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        
+        .radio-group input {
+            margin-right: 8px;
+        }
+        
+        .rating-scale {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .scale-numbers {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .scale-numbers label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            min-width: 25px;
+            border: 1px solid #ddd;
+        }
+        
+        .scale-label {
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .submit-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .submit-btn:hover {
+            background: #45a049;
+        }
+        
+        .survey-btn {
+            background: #9C27B0;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            margin: 10px 0;
+        }
+        
+        .survey-btn:hover {
+            background: #7B1FA2;
+        }
+        
+        .textarea-input, .select-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            color: #555;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .checkbox-group input {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <h3>📱 Extension Preview</h3>
+        
+        <!-- Main Panel (what users see first) -->
+        <div style="margin-bottom: 20px; padding: 15px; background: #e8f5e8; border-radius: 6px;">
+            <h4>Main Recording Panel</h4>
+            <div style="margin: 10px 0;">
+                <input type="checkbox" checked> Track user interactions
+            </div>
+            <button style="background: #4CAF50; color: white; border: none; padding: 10px; width: 100%; border-radius: 4px; margin: 5px 0;">Start Recording</button>
+            <button class="survey-btn">📋 Take User Experience Survey</button>
+        </div>
+        
+        <!-- Survey Panel (what opens when survey button is clicked) -->
+        <div class="survey-header">
+            <h3>📋 User Experience Survey</h3>
+        </div>
+        
+        <form>
+            <div class="question-group">
+                <label class="question-label">1. How easy was it to start recording?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="ease_of_use" value="very_easy"> Very Easy</label>
+                    <label><input type="radio" name="ease_of_use" value="easy"> Easy</label>
+                    <label><input type="radio" name="ease_of_use" value="neutral"> Neutral</label>
+                    <label><input type="radio" name="ease_of_use" value="difficult"> Difficult</label>
+                    <label><input type="radio" name="ease_of_use" value="very_difficult"> Very Difficult</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <label class="question-label">2. How would you rate the recording quality?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="quality" value="excellent"> Excellent</label>
+                    <label><input type="radio" name="quality" value="good"> Good</label>
+                    <label><input type="radio" name="quality" value="average"> Average</label>
+                    <label><input type="radio" name="quality" value="poor"> Poor</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <label class="question-label">3. Which features did you use?</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="features" value="screen_recording"> Screen Recording</label>
+                    <label><input type="checkbox" name="features" value="interaction_tracking"> Interaction Tracking</label>
+                    <label><input type="checkbox" name="features" value="audio_recording"> Audio Recording</label>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <label class="question-label">4. How likely are you to recommend this extension?</label>
+                <div class="rating-scale">
+                    <span class="scale-label">Not likely</span>
+                    <div class="scale-numbers">
+                        <label><input type="radio" name="recommendation" value="1"> 1</label>
+                        <label><input type="radio" name="recommendation" value="2"> 2</label>
+                        <label><input type="radio" name="recommendation" value="3"> 3</label>
+                        <label><input type="radio" name="recommendation" value="4"> 4</label>
+                        <label><input type="radio" name="recommendation" value="5"> 5</label>
+                        <label><input type="radio" name="recommendation" value="6"> 6</label>
+                        <label><input type="radio" name="recommendation" value="7"> 7</label>
+                        <label><input type="radio" name="recommendation" value="8"> 8</label>
+                        <label><input type="radio" name="recommendation" value="9"> 9</label>
+                        <label><input type="radio" name="recommendation" value="10"> 10</label>
+                    </div>
+                    <span class="scale-label">Very likely</span>
+                </div>
+            </div>
+
+            <div class="question-group">
+                <label class="question-label">5. What is your primary use case?</label>
+                <select name="use_case" class="select-input">
+                    <option value="">Please select...</option>
+                    <option value="tutorials">Creating tutorials/demos</option>
+                    <option value="bug_reports">Bug reporting</option>
+                    <option value="presentations">Presentations</option>
+                    <option value="gaming">Gaming content</option>
+                    <option value="meetings">Recording meetings</option>
+                    <option value="education">Educational content</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="question-group">
+                <label class="question-label">6. Additional feedback:</label>
+                <textarea name="comments" class="textarea-input" placeholder="Share your thoughts..." rows="3"></textarea>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px; padding-top: 15px; border-top: 2px solid #e0e0e0;">
+                <button type="submit" class="submit-btn">Submit Survey</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
