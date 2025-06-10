@@ -1,4 +1,4 @@
-# Screen Recorder Chrome Extension
+# AVA User Study Extension
 
 A Chrome extension for screen recording with ethical user interaction tracking.
 
@@ -9,6 +9,7 @@ A Chrome extension for screen recording with ethical user interaction tracking.
 - 🔒 Privacy-focused with explicit user consent
 - 📱 Visual recording indicator
 - 📁 Downloadable interaction logs
+- User study questionare
 
 ## Installation
 
